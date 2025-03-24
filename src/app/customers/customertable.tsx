@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { getCustomers } from "./getcustomers";
-import CommonTable from "./commontable";
-import SkeletonTable from "./skeletontable";
+import CommonTable from "../api/utils/commontable";
+import SkeletonTable from "../api/utils/skeletontable";
 
 export default function CustomersTable() {
   const [data, setData] = useState<any[]>([]);
