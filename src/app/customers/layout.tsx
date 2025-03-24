@@ -12,7 +12,7 @@ const Layout = ({
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <aside className="w-1/4 bg-gray-200 p-4">{sidebar}</aside>
+      <aside className="w-1/7 bg-gray-200 p-0">{sidebar}</aside>
 
       {/* Main Content */}
       <div className="flex flex-col flex-1">

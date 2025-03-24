@@ -1,24 +1,10 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { getCustomers } from "./getcustomers";
-import CommonTable from "./commontable";
-const page = () => {
-  const [data, setdata] = useState([]);
-  useEffect(() => {
-    getCustomers().then((res) => {
-      setdata(res);
-      console.log(res);
-    });
-  }, []);
+import CustomersTable from "./customertable";
 
+export default function Page() {
   return (
-    <>
-      <div>customers render</div>
-      <div>
-        <CommonTable data={data} />
-      </div>
-    </>
+    <div>
+      <h1>Customers Render</h1>
+      <CustomersTable /> {/* No need for Suspense now */}
+    </div>
   );
-};
-
-export default page;
+}

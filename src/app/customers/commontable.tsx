@@ -18,11 +18,13 @@ const CommonTable = <T extends object>({ data }: CommonTableProps<T>) => {
     : [];
 
   return (
-    <Table
-      dataSource={data}
-      columns={columns}
-      rowKey={(record) => JSON.stringify(record)}
-    />
+    <>
+      <Table
+        dataSource={data}
+        columns={columns}
+        rowKey={(record) => JSON.stringify(record)}
+      />
+    </>
   );
 };
 
